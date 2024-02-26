@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - echo Installing system dependencies...
-      - sudo apt-get update
-      - sudo apt-get install -y python3-pip python3-dev libpq-dev
+      - sudo yum update
+      - sudo yum install -y python3-pip python3-dev libpq-dev
       - echo Installing Python dependencies...
       - pip install -r requirements.txt
   pre_build:
