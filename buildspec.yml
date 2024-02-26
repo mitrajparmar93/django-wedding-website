@@ -1,23 +1,19 @@
-version: 0.2
-
-phases:
-  install:
-    commands:
-      - echo Installing system dependencies...
-      - sudo yum update -y
-      - sudo yum install -y python3-pip python3-dev libpq-dev
-      - echo Installing Python dependencies...
-      - pip install -r requirements.txt
-  pre_build:
-    commands:
-      - echo Running tests...
-      - python manage.py test
-  build:
-    commands:
-      - echo Collecting static files...
-      - python manage.py collectstatic --noinput
-      # Include any additional build commands here
-artifacts:
-  files:
-    - '**/*'
-  base-directory: 'path/to/collectstatic/output/directory'
+version: '3'
+services:
+  web:
+    image: python:3.8
+    environment:
+      - SECRET_KEY=your_secret_key
+      - DEBUG=on
+      - MAIL_BACKEND=smtp
+      - EMAIL_HOST=your_email_host
+      - EMAIL_PORT=your_email_port
+      - EMAIL_HOST_USER=your_email_user
+      - EMAIL_HOST_PASSWORD=your_email_password
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: >
+      bash -c "pip install -r requirements.txt &&
+               python manage.py migrate &&
+               python manage.py runserver 0.0.0.0:8000"
