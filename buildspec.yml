@@ -20,4 +20,3 @@ phases:
   post_build:
     commands:
       - echo "Deployment completed"
-      - python manage.py runserver
