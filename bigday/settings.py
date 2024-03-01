@@ -31,7 +31,7 @@ DEBUG = True
 # Set to "console" for console output of emails or to "smtp" to send real mails
 MAIL_BACKEND = "console"
 
-ALLOWED_HOSTS = ["my_website_url", "127.0.0.1"]
+ALLOWED_HOSTS = ["my_website_url", "127.0.0.1", "mrpxalewed-django-env.eba-jmn7f4wp.us-east-1.elasticbeanstalk.com"]
 CSRF_TRUSTED_ORIGINS = ["https://my_website_url",'https://127.0.0.1' ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'guests.apps.GuestsConfig',
+    'storages'
 ]
 
 MIDDLEWARE = [
