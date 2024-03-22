@@ -11,6 +11,7 @@ phases:
       - echo "Installing dependencies"
       - pip install --upgrade pip
       - pip install -r requirements.txt
+      - pip install awsebcli --upgrade
   build:
     commands:
       - echo "Running Django migrations"
@@ -21,7 +22,10 @@ phases:
   post_build:
     commands:
       - echo "Deployment completed"
+      - eb deploy mrpxalewed --staged
 
 artifacts:
   files:
     - '**/*'
+  base-directory: /
+  discard-paths: no
