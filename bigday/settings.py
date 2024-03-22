@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'bigday.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-if 'RDS_DB_NAME' in os.environ:
+if 'CODEBUILD_CI' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
