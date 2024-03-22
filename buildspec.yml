@@ -3,6 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - printenv
       - sudo yum -y update && sudo yum -y upgrade
       - sudo yum install -y libpq-devel
       - pip install virtualenv
