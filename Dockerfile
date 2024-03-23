@@ -4,7 +4,7 @@ FROM python:3.10.11-slim-buster
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV RUNNING_IN_DOCKER 1
+# ENV RUNNING_IN_DOCKER 1
 
 # Set work directory
 RUN ["mkdir", "-p", "/code"]
