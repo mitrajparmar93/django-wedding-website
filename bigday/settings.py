@@ -100,11 +100,11 @@ if 'CODEBUILD_CI' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': "test",
-            'USER': "test",
-            'PASSWORD': "test",
-            'HOST': "test",
-            'PORT': "test",
+            'NAME': os.environ["RDS_INSTANCE_NAME"],
+            'USER': os.environ["RDS_USERNAME"],
+            'PASSWORD': os.environ["RDS_PASSWORD"],
+            'HOST': os.environ["RDS_HOSTNAME"],
+            'PORT': os.environ["RDS_PORT"],
         }
     }
 else:
