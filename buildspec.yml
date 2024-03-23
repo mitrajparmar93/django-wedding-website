@@ -22,10 +22,8 @@ phases:
   post_build:
     commands:
       - echo "Deployment completed"
-      - eb deploy mrpxalewed --staged
 
 artifacts:
   files:
     - '**/*'
-  base-directory: /
   discard-paths: no
