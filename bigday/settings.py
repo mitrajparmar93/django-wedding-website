@@ -96,28 +96,28 @@ WSGI_APPLICATION = 'bigday.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-if 'CODEBUILD_CI' in os.environ:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.environ["RDS_INSTANCE_NAME"],
-            'USER': os.environ["RDS_USERNAME"],
-            'PASSWORD': os.environ["RDS_PASSWORD"],
-            'HOST': os.environ["RDS_HOSTNAME"],
-            'PORT': os.environ["RDS_PORT"],
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'postgres',
-            'USER': 'mrpmrp',
-            'PASSWORD': 'postgres',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
-    }
+# if 'CODEBUILD_CI' in os.environ:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': os.environ["RDS_INSTANCE_NAME"],
+#             'USER': os.environ["RDS_USERNAME"],
+#             'PASSWORD': os.environ["RDS_PASSWORD"],
+#             'HOST': os.environ["RDS_HOSTNAME"],
+#             'PORT': os.environ["RDS_PORT"],
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': 'postgres',
+#             'USER': 'mrpmrp',
+#             'PASSWORD': 'postgres',
+#             'HOST': 'localhost',
+#             'PORT': '5432',
+#         }
+#     }
 
 
 # Password validation
