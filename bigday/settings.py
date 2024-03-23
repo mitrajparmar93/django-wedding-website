@@ -99,7 +99,7 @@ WSGI_APPLICATION = 'bigday.wsgi.application'
 if 'CODEBUILD_CI' in os.environ:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django.db.backends.sqlite3',
             'NAME': 'mydatabase'
             # 'NAME': os.environ["RDS_INSTANCE_NAME"],
             # 'USER': os.environ["RDS_USERNAME"],
