@@ -158,21 +158,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_ROOT = "static_root"
-STATIC_URL = "static/"
-STATICFILES_DIRS = (os.path.join("bigday", "static"),)
+STATIC_URL = "/static/"
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "bigday", "static"),)
 
 # Some default values. Will be overwritten by a localsetting.py (rename 'localsettings.py.template' to 'localsettings.py')
 # This is used in a few places where the names of the couple are used
-BRIDE_AND_GROOM = "Bride and Groom"
+BRIDE_AND_GROOM = "Mitraj and Alexandra"
 # the date of your wedding
-WEDDING_DATE = "January 1st, 1969"
+WEDDING_DATE = "November 11th, 2024"
 # the location of your wedding
-WEDDING_LOCATION = "North Pole, USA"
+WEDDING_LOCATION = "Tampa, FL USA"
 # This is used in links in save the date / invitations
-WEDDING_WEBSITE_URL = "https://thehappycouple.com"
+WEDDING_WEBSITE_URL = "https://mrpalewed.com"
 # base address for all emails
-DEFAULT_WEDDING_EMAIL = "happilyeverafter@example.com"
-WEDDING_CC_LIST = []
+DEFAULT_WEDDING_EMAIL = "mrpalewed@gmail.com"
+WEDDING_CC_LIST = ["mitrajparmar93@gmail.com"]
 
 # Checks, if the 'localsettings.py' is present and set some couple variables
 # which are used in a few places.
