@@ -31,7 +31,7 @@ DEBUG = True
 # Set to "console" for console output of emails or to "smtp" to send real mails
 MAIL_BACKEND = "console"
 
-ALLOWED_HOSTS = ["*"] #temporary
+ALLOWED_HOSTS = ["*"]  # temporary
 CSRF_TRUSTED_ORIGINS = ["https://my_website_url", "https://127.0.0.1:8000"]
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
@@ -101,23 +101,23 @@ if "CODEBUILD_CI" in os.environ:
 elif os.environ.get("RUNNING_IN_DOCKER"):
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "ENGINE": "django.db.backends.sqlite3",
             "NAME": "mrpxaleweddingdb",
-            "USER": "mrp",
-            "PASSWORD": "postgres",
-            "HOST": "host.docker.internal",
-            "PORT": "5432",
+            # "USER": "mrp",
+            # "PASSWORD": "postgres",
+            # "HOST": "host.docker.internal",
+            # "PORT": "5432",
         }
     }
 else:
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "ENGINE": "django.db.backends.sqlite3",
             "NAME": "mrpxaleweddingdb",
-            "USER": "mrp",
-            "PASSWORD": "postgres",
-            "HOST": "localhost",
-            "PORT": "5432",
+            # "USER": "mrp",
+            # "PASSWORD": "postgres",
+            # "HOST": "localhost",
+            # "PORT": "5432",
         }
     }
 
