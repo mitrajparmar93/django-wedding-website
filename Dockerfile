@@ -30,4 +30,6 @@ EXPOSE 8000
 
 # Run the application:
 # CMD ["gunicorn", "bigday.wsgi:application", "-b", "0.0.0.0:8000"]
+RUN pwd
+RUN ls -al
 CMD python mrpxalewedding/manage.py migrate && python mrpxalewedding/manage.py runserver 0.0.0.0:8000
