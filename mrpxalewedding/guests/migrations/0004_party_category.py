@@ -8,13 +8,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('guests', '0003_guest_is_child'),
+        ("guests", "0003_guest_is_child"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='party',
-            name='category',
+            model_name="party",
+            name="category",
             field=models.CharField(blank=True, max_length=20, null=True),
         ),
     ]

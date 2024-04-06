@@ -8,13 +8,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('guests', '0014_auto_20160326_1447'),
+        ("guests", "0014_auto_20160326_1447"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='party',
-            name='comments',
+            model_name="party",
+            name="comments",
             field=models.TextField(blank=True, null=True),
         ),
     ]

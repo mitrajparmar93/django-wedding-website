@@ -8,18 +8,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('guests', '0001_initial'),
+        ("guests", "0001_initial"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='guest',
-            old_name='name',
-            new_name='first_name',
+            model_name="guest",
+            old_name="name",
+            new_name="first_name",
         ),
         migrations.AddField(
-            model_name='guest',
-            name='last_name',
+            model_name="guest",
+            name="last_name",
             field=models.TextField(blank=True, null=True),
         ),
     ]

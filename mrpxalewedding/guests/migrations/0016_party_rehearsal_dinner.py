@@ -8,13 +8,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('guests', '0015_party_comments'),
+        ("guests", "0015_party_comments"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='party',
-            name='rehearsal_dinner',
+            model_name="party",
+            name="rehearsal_dinner",
             field=models.BooleanField(default=False),
         ),
     ]

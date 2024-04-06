@@ -8,13 +8,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('guests', '0013_auto_20160326_1235'),
+        ("guests", "0013_auto_20160326_1235"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='guest',
-            name='meal',
-            field=models.CharField(blank=True, choices=[('beef', 'cow'), ('fish', 'fish'), ('hen', 'hen'), ('vegetarian', 'vegetable')], max_length=20, null=True),
+            model_name="guest",
+            name="meal",
+            field=models.CharField(
+                blank=True,
+                choices=[
+                    ("beef", "cow"),
+                    ("fish", "fish"),
+                    ("hen", "hen"),
+                    ("vegetarian", "vegetable"),
+                ],
+                max_length=20,
+                null=True,
+            ),
         ),
     ]

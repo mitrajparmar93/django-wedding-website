@@ -1,13 +1,13 @@
 from django.core.management import BaseCommand
-from guests.models import Party, Guest
+from guests.models import Guest, Party
 
 
 class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         count = Guest.objects.count()
-        if input('Really delete all {} guests?! (y/n):\n'.format(count)) == 'y':
+        if input("Really delete all {} guests?! (y/n):\n".format(count)) == "y":
             Party.objects.all().delete()
-            print('guests deleted')
+            print("guests deleted")
         else:
-            print('canceled')
+            print("canceled")

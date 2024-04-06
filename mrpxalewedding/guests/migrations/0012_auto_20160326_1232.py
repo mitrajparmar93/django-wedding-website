@@ -16,7 +16,7 @@ def reset_invitation_ids(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('guests', '0011_auto_20160320_1342'),
+        ("guests", "0011_auto_20160320_1342"),
     ]
 
     operations = [

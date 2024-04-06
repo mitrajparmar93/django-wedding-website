@@ -1,23 +1,23 @@
 from django.test import TestCase
-from guests.models import Party, Guest
+from guests.models import Guest, Party
 
 
 class PartyTest(TestCase):
 
     def setUp(self):
         self.party = Party.objects.create(
-            name='The Starks',
-            type='formal',
+            name="The Starks",
+            type="formal",
         )
         self.guest1 = Guest.objects.create(
             party=self.party,
-            first_name='Ned',
-            last_name='Stark',
+            first_name="Ned",
+            last_name="Stark",
         )
         self.guest2 = Guest.objects.create(
             party=self.party,
-            first_name='Catelyn',
-            last_name='Stark',
+            first_name="Catelyn",
+            last_name="Stark",
         )
 
     def tearDown(self):

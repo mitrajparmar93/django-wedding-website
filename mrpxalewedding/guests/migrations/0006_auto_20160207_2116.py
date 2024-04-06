@@ -8,18 +8,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('guests', '0005_auto_20160123_1515'),
+        ("guests", "0005_auto_20160123_1515"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='party',
-            name='save_the_date_opened',
+            model_name="party",
+            name="save_the_date_opened",
             field=models.DateTimeField(blank=True, default=None, null=True),
         ),
         migrations.AlterField(
-            model_name='party',
-            name='save_the_date_sent',
+            model_name="party",
+            name="save_the_date_sent",
             field=models.DateTimeField(blank=True, default=None, null=True),
         ),
     ]
