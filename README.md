@@ -92,7 +92,6 @@ Just access `/dashboard/` from an account with admin access. Your other guests w
 
 You can easily hook up Google analytics by editing the tracking ID in `google-analytics.html`.
 
-
 ## Installation
 
 This is developed for Python 3 and Django 4.1.
@@ -112,7 +111,7 @@ If you run into Python errors, try to replace `python` with `python3`.
 
 You can now visit your site at `http://localhost:8000/`.
 
-The dashboard and admin interface are available at `http://localhost:8000/dashboard/` and `http://localhost:8000/admin/`. 
+The dashboard and admin interface are available at `http://localhost:8000/dashboard/` and `http://localhost:8000/admin/`.
 Use the superuser created in step three of the commands above.
 
 ## Customization
@@ -120,7 +119,7 @@ Use the superuser created in step three of the commands above.
 I recommend forking this project and just manually modifying it by hand to replace everything with what you want.
 Searching for the text on a page in the repository is a great way to find where something lives.
 
-Some things are already customizable thanks to the use of variables. 
+Some things are already customizable thanks to the use of variables.
 Copy `bigday/localsettings.py.template` to `bigday/localsettings.py` and edit the values.
 You definitely need to change the `SECRET_KEY` to a new secure value.
 
@@ -128,19 +127,21 @@ You definitely need to change the `SECRET_KEY` to a new secure value.
 
 ### Sending email
 
-This application uses Django's email framework for sending mail. 
+This application uses Django's email framework for sending mail.
 In order to hook it into a real server, you need to switch the variable `MAIL_BACKEND` of the `bigday/settings.py` from `console` to `smtp`.
 You have to enter your email configuration in the `bigday/localsettings.py` (see `Customization`).
 
 This [thread on stack overflow](https://stackoverflow.com/questions/6367014/how-to-send-email-via-django) has a working example for a Gmail configuration.
 
 Save the dates and invitations can be send with the following commands:
+
 ```bash
 python manage.py send_save_the_dates --send --mark-sent
 python manage.py send_invitations --send --mark-sent
 ```
 
 If you want to know more about the command line options, please use the `-h` option:
+
 ```bash
 python manage.py send_save_the_dates -h
 python manage.py send_invitations -h

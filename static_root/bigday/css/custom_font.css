@@ -1,0 +1,4 @@
+@font-face {
+    font-family: 'Waiting on the Bridge';
+    src: url('{% static "bigday/fonts/waiting-on-the-bridge.ttf" %}') format('truetype');
+}

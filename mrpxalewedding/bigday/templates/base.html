@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="{% block meta_description %}Mitraj and Ale's wedding website.{% endblock %}"
+    />
+    <meta
+      name="author"
+      content="{% block meta_author %}Mitraj Parmae{% endblock %}"
+    />
+    <title>{{ couple_name }}'s big day</title>
+
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}" />
+
+    <!-- Bootstrap Core CSS -->
+    <link
+      href="{% static 'bootstrap-3.3.6-dist/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Fonts -->
+    <link
+      rel="stylesheet"
+      href="{% static 'font-awesome/css/font-awesome.min.css' %}"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap&family=Libre+Caslon+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% include "partials/google-analytics.html" %} {% block page_head %}
+    {%endblock %}
+  </head>
+  <body id="page-top" class="{% block body_class %}{% endblock %}">
+    {% block page_content %}{% endblock %} {% include "partials/footer.html" %}
+  </body>
+</html>

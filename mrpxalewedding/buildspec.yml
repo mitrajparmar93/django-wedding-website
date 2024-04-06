@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - sudo yum -y update && sudo yum -y upgrade
+      - sudo yum install -y libpq-devel
+      - pip install virtualenv
+      - virtualenv .
+      - source bin/activate
+      - echo "Installing dependencies"
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
+      - pip install awsebcli --upgrade
+  build:
+    commands:
+      - echo "Running Django migrations"
+      - python3 manage.py makemigrations
+      - python manage.py migrate
+      - echo "Collecting static files"
+      - python manage.py collectstatic --noinput
+  post_build:
+    commands:
+      - echo "Deployment completed"
+
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
